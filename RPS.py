@@ -1,11 +1,12 @@
-# The example function below keeps track of the opponent's history and plays whatever the opponent played two plays ago. It is not a very good player so you will need to change the code to pass the challenge.
+
 """Hint: To defeat all four opponents, your program may need to have 
 multiple strategies that change depending on the plays 
 of the opponent."""
 
 # no rnn, just simple pattern recognition + prediction
 
-#find all times the last 4-move pattern appears, 
+# find all times the last 5-move pattern appears,
+# if none, try 4-move pattern, then 3-move pattern, then 2-move pattern
 # count what came after the pattern
 
 def player(prev_play, opponent_history=[]):
@@ -47,14 +48,6 @@ def player(prev_play, opponent_history=[]):
 
     return guess
 
-
-        #counts = {'R': recent_pattern.count('R'), 
-                  #'P': recent_pattern.count('P'), 
-                  #'S': recent_pattern.count('S')
-                  #}
-        
-        #prediction = max(counts, key=counts.get)
-        #guess = counter[prediction]
 
    
 
